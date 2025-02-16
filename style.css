@@ -358,7 +358,6 @@ nav ul li a:hover::after{
     padding: 50px 0;
     background-color: white;
     text-align: center;
-    margin-bottom: 80px;
 }
 
 .sub-title {
@@ -367,52 +366,29 @@ nav ul li a:hover::after{
     margin-bottom: 30px;
 }
 
-/* Certification Cards Layout */
-.certification-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+/* Slider Container */
+.certification-slider {
+    overflow: hidden; /* Hides scrollbars */
+    width: 100%;
+    position: relative;
 }
 
-/* Certifications Section */
-#certifications {
-    padding: 50px 0;
-    background-color: white;
-    text-align: center;
-    overflow-x: hidden; /* Prevents overflow issues */
-}
-
-.sub-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/* Horizontal Scroll */
+/* Horizontal Scrolling */
 .certification-list {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-snap-type: x mandatory;
-    padding: 10px;
-    white-space: nowrap;
-    scrollbar-width: none; /* Hides scrollbar on Firefox */
+    width: max-content;
+    animation: scrollCerts 20s linear infinite;
 }
 
-.certification-list::-webkit-scrollbar {
-    display: none; /* Hides scrollbar on Chrome/Safari */
-}
-
-/* Certification Cards */
+/* Certification Card */
 .certification-card {
     flex: 0 0 auto;
-    width: 250px; /* Adjust based on certificate size */
-    height: 150px;
+    width: 220px;
+    height: 140px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -424,9 +400,14 @@ nav ul li a:hover::after{
 
 /* Hover Effect */
 .certification-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
+/* Animation */
+@keyframes scrollCerts {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
 /*------------- Contact  -----------*/
 
 .content-left{
@@ -579,8 +560,17 @@ nav .fa-solid{
         text-align: center;
         margin-bottom: 20px;
     }
-     .certification-list {
+/*      .certification-list {
         flex-direction: column;
         align-items: center;
+    } */
+    .certification-list {
+        animation: none; /* Disable animation on mobile */
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none; /* Hide scrollbar */
+    }
+    .certification-list::-webkit-scrollbar {
+        display: none;
     }
 }
