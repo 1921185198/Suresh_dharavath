@@ -422,7 +422,8 @@ nav .fa-solid{
         flex-basis: 50%;
     }
     .about-col-2{
-        margin-top: -80px;
+/*         margin-top: -80px; */
+        margin-top: -20px;
         flex-basis: 45%;
     }
     .content-left, .content-right{
