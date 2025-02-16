@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Home Page -->
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 id="logo"><span>Naidu</span> Tamarana</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div id="header-style">
+                <h1>Hi, I'm <span id="span1">Naidu</span><br><span id="span2"></span></h1>
+                <p>I design and develop scalable web applications with expertise in front-end<br> and back-end technologies. Focused on delivering clean, efficient, and innovative solutions</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="first">Hire me</button>
+            <button id="second"> <a href="./NaiduTamaranaResume.pdf" download class="secondbtn">Download CV &#128196</a></button>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/naidu-tamarana/" target="_blank" class="icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/githubnaidutamarana?tab=repositories" target="_blank" class="icon">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://x.com/NAIDUTAMARANA4" target="_blank" class="icon">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="https://www.facebook.com/naidu.tamarana.31" target="_blank" class="icon">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+    
+<!-- About -->
+
+    <div id="about">
+        <h2 id="head">About Me</h2>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h3>My Introdcution</h3>
+                    <p>I am proficient in Java, JavaScript, HTML, CSS, and SQL, with experience in React for front-end development and Oracle SQL for database management. I have strong problem-solving skills in Data Structures and Algorithms (DSA) and use GitHub for version control. Additionally, I have hands-on experience with image processing and software optimization techniques.</p>
+                </div>
+                <div class="about-col-2">
+                    <div class="heading">
+                        <div class="front">
+                            <h3>Front End</h3>
+                            <button id="b1">Html</button>
+                            <button id="b2">Css</button>
+                            <button id="b3">Bootstrap</button><br>
+                            <button id="b4">JavaScript</button>
+                            <button id="b5">React</button>
+                        </div>
+                        <div class="back">
+                            <h3>Back End</h3>
+                            <button>Java</button>
+                        </div>
+                        <div class="data">
+                            <h3>Database</h3>
+                            <Button>Oracle SQL</Button>
+                            <button>MySQL</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------- Projects ------------>
+    <div id="project">
+        <div class="container">
+            <h2 class="sub-title">Projects</h2> 
+            <div class="work-list">
+                <div class="work">
+                    <img src="./4.png">
+                    <div class="layer">
+                        <h3>Web Application</h3>
+                        <p>A dynamic food delivery web app that allows users to browse restaurants, add items to a cart, and proceed to checkout.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./6.png">
+                    <div class="layer">
+                        <h3>Library Management System</h3>
+                        <p>A Library Management System built using Java allows users to manage books, track borrowings, and handle returns efficiently.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./7.png">
+                    <div class="layer">
+                        <h3>Stopwatch App</h3>
+                        <p>A stopwatch application with start, stop, pause, reset, and lap time tracking features.                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+<!------------ Contact ----------->
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="row">
+            
+            <div class="content-left">
+                
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>naidutamarana465@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 79936XXXXX</p>
+
+                <button class="btn3"><a href="./NaiduTamaranaResume.pdf" download class="btn2">Download CV &#128196</a></button>
+            </div>
+
+            <div class="content-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter Your Name" required>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Naidu Tamarana - All Rights Reserved</p>
+    </div>
+</div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#span2",{
+
+            strings: ["Full Stack Developer","Front-End Developer"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-130px";
+        }
+    </script>
+    <script src="./index.js"></script>
+</body>
+</html>
