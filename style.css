@@ -406,7 +406,7 @@ nav ul li a:hover::after{
 /* Animation */
 @keyframes scrollCerts {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    100% { transform: translateX(-50%); } /* Moves half way for looping */
 }
 /*------------- Contact  -----------*/
 
@@ -564,14 +564,15 @@ nav .fa-solid{
         flex-direction: column;
         align-items: center;
     } */
-    .certification-list {
-        animation: none; /* Disable animation on mobile */
+  .certification-list {
+        animation: none; /* Disable auto-scroll on mobile */
+        display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         scrollbar-width: none; /* Hide scrollbar */
     }
     .certification-list::-webkit-scrollbar {
-        display: none;
+        display: none; /* Hide scrollbar on Chrome/Safari */
     }
 }
 
