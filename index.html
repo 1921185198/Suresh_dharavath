@@ -302,13 +302,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-</script>
-    <script>
+<script>
   const certificationsSection = document.getElementById('certifications-section');
   const certificationsWrapper = document.querySelector('.certifications-wrapper');
   let isAnimationPaused = false;
 
+  // Click event for desktop users
   certificationsSection.addEventListener('click', () => {
+    toggleAnimation();
+  });
+
+  // Touch event for mobile users
+  certificationsSection.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent any default touch behavior, like scrolling
+    toggleAnimation();
+  });
+
+  function toggleAnimation() {
     if (isAnimationPaused) {
       // Resume the animation
       certificationsWrapper.style.animationPlayState = 'running';
@@ -319,8 +329,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Toggle the flag
     isAnimationPaused = !isAnimationPaused;
-  });
+  }
 </script>
+
 </body>
 </html>
 
