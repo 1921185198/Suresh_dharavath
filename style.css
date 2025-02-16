@@ -183,6 +183,8 @@ nav ul li a:hover::after{
 .about-col-2 {
     flex-basis: 50%;
     margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
 }
 .about-col-1 h3{
     text-align: center;
@@ -424,8 +426,8 @@ nav .fa-solid{
     }
     .about-col-2{
 /*         margin-top: -80px; */
-        margin-top: -20px;
-        flex-basis: 45%;
+        margin-top: -80px;
+        flex-basis: 50%;
     }
     .content-left, .content-right{
         flex-basis: 100%;
