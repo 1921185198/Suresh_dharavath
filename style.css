@@ -360,6 +360,13 @@ nav ul li a:hover::after{
   width: 100%;
   overflow: hidden;
 }
+.certifications-header {
+  text-align: center; /* Center align the header */
+  font-size: 2rem; /* Adjust the font size */
+  font-weight: bold; /* Make the header bold */
+  color: #333; /* Set the color for the header */
+  margin-bottom: 20px; /* Add space between the header and the certifications */
+}
 
 .certifications-wrapper {
   display: flex;
