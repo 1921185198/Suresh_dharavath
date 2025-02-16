@@ -210,6 +210,63 @@ nav ul li a:hover::after{
     border: none;
     margin-bottom: 15px;
 }
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.sub-title_c {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Skills & Tools Section */
+.row_1 {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.skills-section, .tools-section {
+    flex: 1;
+    text-align: center;
+}
+
+.skills-section h3, .tools-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Glowing Skill Buttons */
+.skill-button {
+    background-color: #008080;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Hover Glow Effect */
+.skill-button:hover {
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Keyframe Animations */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #008080; }
+    50% { box-shadow: 0 0 20px #00ffcc; }
+    100% { box-shadow: 0 0 5px #008080; }
+}
 /* ---------- Projects ---------- */
 #project{
     padding: 50px 0;
