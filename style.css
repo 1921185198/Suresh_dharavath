@@ -398,7 +398,7 @@ nav ul li a:hover::after{
 
   /* Slower scrolling speed on mobile to make it easier to view */
   .certifications-wrapper {
-    animation: scroll-certifications-mobile 30s linear infinite;
+    animation: scroll-certifications-mobile 20s linear infinite;
   }
 }
 
@@ -409,7 +409,7 @@ nav ul li a:hover::after{
 
   /* Even slower scrolling speed for small screens */
   .certifications-wrapper {
-    animation: scroll-certifications-mobile 40s linear infinite;
+    animation: scroll-certifications-mobile 25s linear infinite;
   }
 }
 
