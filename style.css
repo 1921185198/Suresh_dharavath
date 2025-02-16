@@ -358,6 +358,7 @@ nav ul li a:hover::after{
     padding: 50px 0;
     background-color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .sub-title {
@@ -368,17 +369,17 @@ nav ul li a:hover::after{
 
 /* Slider Container */
 .certification-slider {
-    overflow: hidden; /* Hides scrollbars */
     width: 100%;
+    overflow: hidden;
     position: relative;
 }
 
-/* Horizontal Scrolling */
+/* Certification List - Horizontal Scrolling */
 .certification-list {
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scrollCerts 20s linear infinite;
+    animation: scrollCerts 15s linear infinite; /* Auto-scroll effect */
 }
 
 /* Certification Card */
@@ -403,7 +404,7 @@ nav ul li a:hover::after{
     transform: scale(1.1);
 }
 
-/* Animation */
+/* Auto-Scroll Animation */
 @keyframes scrollCerts {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } /* Moves half way for looping */
