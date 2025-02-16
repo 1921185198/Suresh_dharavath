@@ -181,6 +181,7 @@ nav ul li a:hover::after{
 }
 .about-col-2 {
     flex-basis: 50%;
+    margin-bottom: 50px;
 }
 .about-col-1 h3{
     text-align: center;
