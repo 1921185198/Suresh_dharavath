@@ -370,7 +370,7 @@ nav ul li a:hover::after{
 
 .certifications-wrapper {
   display: flex;
-  animation: scroll-certifications 14s linear infinite;
+  animation: scroll-certifications 25s linear infinite;
 }
 
 .certification {
@@ -385,7 +385,7 @@ nav ul li a:hover::after{
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -419,7 +419,7 @@ nav ul li a:hover::after{
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
