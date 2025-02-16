@@ -370,7 +370,7 @@ nav ul li a:hover::after{
 
 .certifications-wrapper {
   display: flex;
-  animation: scroll-certifications 20s linear infinite;
+  animation: scroll-certifications 14s linear infinite;
 }
 
 .certification {
@@ -385,7 +385,7 @@ nav ul li a:hover::after{
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -398,7 +398,7 @@ nav ul li a:hover::after{
 
   /* Slower scrolling speed on mobile to make it easier to view */
   .certifications-wrapper {
-    animation: scroll-certifications-mobile 20s linear infinite;
+    animation: scroll-certifications-mobile 13s linear infinite;
   }
 }
 
@@ -409,7 +409,7 @@ nav ul li a:hover::after{
 
   /* Even slower scrolling speed for small screens */
   .certifications-wrapper {
-    animation: scroll-certifications-mobile 25s linear infinite;
+    animation: scroll-certifications-mobile 10s linear infinite;
   }
 }
 
@@ -419,7 +419,7 @@ nav ul li a:hover::after{
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
