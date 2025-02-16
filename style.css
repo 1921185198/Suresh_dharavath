@@ -379,7 +379,7 @@ nav ul li a:hover::after{
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scrollCerts 15s linear infinite; /* Auto-scroll effect */
+    flex-wrap: nowrap;
 }
 
 /* Certification Card */
@@ -404,11 +404,18 @@ nav ul li a:hover::after{
     transform: scale(1.1);
 }
 
-/* Auto-Scroll Animation */
-@keyframes scrollCerts {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Moves half way for looping */
+/* Hide Scrollbar for Mobile */
+@media (max-width: 768px) {
+    .certification-list {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .certification-list::-webkit-scrollbar {
+        display: none;
+    }
 }
+
 /*------------- Contact  -----------*/
 
 .content-left{
@@ -565,15 +572,6 @@ nav .fa-solid{
         flex-direction: column;
         align-items: center;
     } */
-  .certification-list {
-        animation: none; /* Disable auto-scroll on mobile */
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scrollbar-width: none; /* Hide scrollbar */
-    }
-    .certification-list::-webkit-scrollbar {
-        display: none; /* Hide scrollbar on Chrome/Safari */
-    }
+  
 }
 
