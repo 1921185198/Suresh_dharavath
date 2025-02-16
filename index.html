@@ -269,11 +269,30 @@
             }, 100); 
         });
     }
-    setInterval(restartAnimation, 5000); // Restart every 5 seconds
     document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".certification-list");
-    slider.innerHTML += slider.innerHTML; // Duplicate slides for infinite effect
+
+    // Duplicate slides for infinite effect
+    slider.innerHTML += slider.innerHTML; 
+
+    // Only enable auto-scroll on desktop
+    if (window.innerWidth > 768) {
+        let scrollAmount = 0;
+        function autoScroll() {
+            scrollAmount += 1;
+            if (scrollAmount >= slider.scrollWidth / 2) {
+                scrollAmount = 0;
+                slider.style.transition = "none"; // Reset scroll instantly
+                slider.scrollLeft = 0;
+            } else {
+                slider.style.transition = "scroll-left 0.3s ease-in-out";
+                slider.scrollLeft = scrollAmount;
+            }
+        }
+        setInterval(autoScroll, 50);
+    }
 });
+
 </script>
 </body>
 </html>
