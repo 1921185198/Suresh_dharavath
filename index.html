@@ -297,19 +297,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".certification-list");
 
     // Duplicate slides for infinite effect
-    slider.innerHTML += slider.innerHTML; 
+    slider.innerHTML += slider.innerHTML;
+
+    let scrollSpeed = 1; // Adjust speed
 
     function autoScroll() {
-        if (window.innerWidth > 768) { // Auto-scroll only on desktop
-            slider.scrollLeft += 1; // Move by 1px
-            if (slider.scrollLeft >= slider.scrollWidth / 2) {
-                slider.scrollLeft = 0; // Reset scroll for infinite loop
-            }
+        slider.scrollLeft += scrollSpeed; // Move by 1px
+
+        if (slider.scrollLeft >= slider.scrollWidth / 2) {
+            slider.scrollLeft = 0; // Reset scroll for infinite loop
         }
     }
 
-    setInterval(autoScroll, 20); // Adjust speed of scrolling
+    let scrollInterval = setInterval(autoScroll, 20); // Adjust speed of scrolling
+
+    // Pause scrolling on mobile when touching the screen
+    slider.addEventListener("touchstart", () => {
+        clearInterval(scrollInterval);
+    });
+
+    // Resume scrolling after touch
+    slider.addEventListener("touchend", () => {
+        scrollInterval = setInterval(autoScroll, 20);
+    });
 });
+
 </script>
 </body>
 </html>
