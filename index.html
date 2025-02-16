@@ -193,7 +193,7 @@
 <!-- Certifications Section -->
 <div id="certifications">
     <h2 class="sub-title">Certifications</h2>
-    <div class="container2">
+    <div class="container">
         <div class="certification-slider">
             <div class="certification-list">
                 <div class="certification-card"><img src="./sf.png" alt="Snowflake"></div>
@@ -270,6 +270,10 @@
         });
     }
     setInterval(restartAnimation, 5000); // Restart every 5 seconds
+    document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".certification-list");
+    slider.innerHTML += slider.innerHTML; // Duplicate slides for infinite effect
+});
 </script>
 </body>
 </html>
